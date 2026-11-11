@@ -1,0 +1,101 @@
+{
+ "target_s": 10.0,
+ "runs": {
+  "en_desktop": {
+   "first_card_s": 6.6,
+   "steps": [
+    {
+     "step": "pay",
+     "glow": [
+      0
+     ],
+     "guide": "Tap or drag the glowing card onto the Agent fee."
+    },
+    {
+     "step": "swipe",
+     "glow": [
+      0
+     ],
+     "guide": "Keep cash for the Room deposit: put the rest on the card (0 focus)."
+    },
+    {
+     "step": "bill",
+     "ghost": true,
+     "endGlow": true,
+     "guide": "It comes back next month as a card bill. Pay it all by the due date: no fee, no interest."
+    }
+   ],
+   "month1_end_window": "settle",
+   "second_run": {
+    "glow": [],
+    "step": "",
+    "guide": ""
+   }
+  },
+  "en_phone": {
+   "first_card_s": 6.6,
+   "steps": [
+    {
+     "step": "pay",
+     "glow": [
+      0
+     ],
+     "guide": "Tap or drag the glowing card onto the Agent fee."
+    },
+    {
+     "step": "swipe",
+     "glow": [
+      0
+     ],
+     "guide": "Keep cash for the Room deposit: put the rest on the card (0 focus)."
+    },
+    {
+     "step": "bill",
+     "ghost": true,
+     "endGlow": true,
+     "guide": "It comes back next month as a card bill. Pay it all by the due date: no fee, no interest."
+    }
+   ],
+   "month1_end_window": "settle",
+   "second_run": {
+    "glow": [],
+    "step": "",
+    "guide": ""
+   }
+  },
+  "ar_phone": {
+   "first_card_s": 6.3,
+   "steps": [
+    {
+     "step": "pay",
+     "glow": [
+      0
+     ],
+     "guide": "اضغط على البطاقة المضيئة أو اسحبها إلى عمولة الوسيط."
+    },
+    {
+     "step": "swipe",
+     "glow": [
+      0
+     ],
+     "guide": "احتفظ بالنقد لتأمين الغرفة، وادفع الباقي بـ«على البطاقة» (بلا تركيز)."
+    },
+    {
+     "step": "bill",
+     "ghost": true,
+     "endGlow": true,
+     "guide": "يعود هذا المبلغ الشهر القادم في فاتورة البطاقة. سدّدها كاملة فلا رسوم ولا فائدة."
+    }
+   ],
+   "month1_end_window": "settle",
+   "second_run": {
+    "glow": [],
+    "step": "",
+    "guide": ""
+   }
+  }
+ },
+ "max_s": 6.6,
+ "fails": [],
+ "console_errors": []
+}

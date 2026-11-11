@@ -1,0 +1,118 @@
+/* Payday Spire - teacher dashboard. Same tokens as style.css: night header, sand-paper cards, brass lines. */
+body.tc-page { background: var(--night); color: #fff; }
+.tc-page .code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-weight: 700; letter-spacing: .04em; unicode-bidi: isolate; direction: ltr; }
+.tc-top { background: linear-gradient(var(--night2), var(--night)); border-bottom: 1px solid var(--line); }
+.tc-top-in { max-width: 1040px; margin: 0 auto; padding: 16px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
+.tc-brand { display: flex; gap: 12px; align-items: center; min-width: 0; }
+.tc-logo { flex: none; width: 52px; height: 52px; border-radius: var(--r); display: grid; place-items: center; background: var(--brass); color: #2a1a04; }
+.tc-logo .ic { width: 30px; height: 30px; }
+.tc-top h1 { margin: 0; font-size: 1.6rem; color: var(--brass); }
+.tc-top p { margin: 2px 0 0; color: var(--paper); font-size: .9rem; }
+.tc-nav { display: flex; flex-wrap: wrap; gap: 8px; }
+.tc-nav .btn { text-decoration: none; display: inline-flex; align-items: center; color: #fff; }
+.tc-main { max-width: 1040px; margin: 0 auto; padding: 16px 16px 32px; display: flex; flex-direction: column; gap: 16px; }
+.tc-card { background: var(--paper); color: var(--ink); border: 3px solid var(--brass); border-radius: var(--r-lg); padding: 16px 20px; }
+.tc-card h2 { margin: 0 0 12px; font-size: 1.3rem; }
+.tc-note { margin: 0 0 12px; color: var(--ink2); font-size: .9rem; }
+.tc-privacy { margin: 0 0 12px; padding: 8px 12px; border-radius: var(--r-sm); background: #e6f4ee; border: 1px solid #9ccfb8; color: #0b3d2b; font-size: .9rem; font-weight: 600; }
+.tc-how { margin: 0 0 12px; font-size: .9rem; } .tc-how summary { cursor: pointer; font-weight: 700; color: #7a4d10; min-height: 32px; display: flex; align-items: center; }
+.tc-lbl { display: block; font-weight: 700; font-size: .9rem; margin: 0 0 4px; }
+.tc-card textarea, .tc-card input, .tc-card select { width: 100%; font: inherit; font-size: .9rem; color: var(--ink); background: #fff; border: 2px solid #c9a86a; border-radius: var(--r-sm); padding: 8px 10px; }
+.tc-card textarea { min-height: 9em; resize: vertical; font-family: ui-monospace, Consolas, monospace; text-align: left; }
+.tc-one { margin-top: 12px; } .tc-one-in { display: flex; gap: 8px; } .tc-one-in input { flex: 1; min-height: 44px; font-family: ui-monospace, Consolas, monospace; }
+.tc-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.tc-card .btn { background: #fff; color: var(--ink); border-color: #c9a86a; }
+.tc-card .btn.pri { background: var(--night2); color: #fff; border-color: var(--night); }
+.tc-status { margin: 12px 0 0; font-weight: 700; } .tc-status:empty { display: none; }
+.tc-errs { margin-top: 8px; padding: 8px 12px; border-radius: var(--r-sm); background: #fdeee4; border: 2px solid var(--verm); }
+.tc-errs h3 { margin: 0 0 4px; font-size: 1rem; color: #7a2e00; } .tc-errs ul { margin: 0; padding-inline-start: 1.2em; font-size: .9rem; }
+.tc-errs li.dup { color: var(--ink2); }
+.tc-empty { color: var(--paper); text-align: center; }
+#tcOut { display: flex; flex-direction: column; gap: 16px; outline: none; } #tcOut:empty { display: none; }
+.tc-sample { margin: 0; padding: 8px 12px; border-radius: var(--r-sm); background: #fff7c2; color: #2a2400; border: 2px solid var(--yellow); border-inline-start-width: 6px;
+  font-weight: 700; font-size: .9rem; display: flex; gap: 8px; align-items: flex-start; }
+.tc-sample .ic { flex: none; margin-top: 2px; }
+.tc-pick { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 16px; }
+.tc-pick .tc-lbl { color: var(--brass); } .tc-pick select { width: auto; min-width: 16em; max-width: 100%; min-height: 44px; font: inherit; border-radius: var(--r-sm); }
+.tc-pick .tc-note { color: var(--paper); margin: 8px 0 0; }
+.tc-sum-h { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 12px; }
+.tc-sum-h h2 { margin: 0; } .tc-sum-h .btn { margin-inline-start: auto; }
+.tc-chip { padding: 2px 12px; border-radius: 99px; background: var(--night2); color: var(--brass); font-weight: 700; font-size: .9rem; }
+.tc-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 8px; margin: 0 0 16px; }
+.tc-kpi { background: #fff; border: 1px solid #e3c99a; border-inline-start: 4px solid var(--brass-d); border-radius: var(--r-sm); padding: 8px 12px; }
+.tc-kpi.warn { border-inline-start-color: var(--verm); }
+.tc-kpi dt { font-size: .8rem; font-weight: 700; color: var(--ink2); } .tc-kpi dd { margin: 2px 0 0; }
+.tc-kpi dd b { font-size: 1.5rem; font-variant-numeric: tabular-nums; } .tc-kpi dd small { color: var(--ink2); font-weight: 700; }
+.tc-tbl { width: 100%; border-collapse: collapse; font-size: .9rem; background: #fff; }
+.tc-tbl caption { text-align: start; font-weight: 700; padding: 0 0 8px; }
+.tc-tbl th, .tc-tbl td { padding: 7px 10px; text-align: start; border-bottom: 1px solid #ecdcbc; vertical-align: middle; }
+.tc-tbl thead th { background: #f4e6cb; font-size: .8rem; }
+.tc-tbl tbody th { font-weight: 600; }
+.tc-tbl td { font-variant-numeric: tabular-nums; white-space: nowrap; } .tc-tbl td.num { direction: ltr; text-align: end; }
+.tc-tbl tr.right th { font-weight: 800; }
+.tc-bar { display: inline-block; vertical-align: middle; inline-size: 90px; block-size: 10px; margin-inline-start: 8px; border-radius: 5px; background: #ecdcbc; overflow: hidden; }
+.tc-bar i { display: block; block-size: 100%; background: var(--blue); }
+.tc-tbl tr.right .tc-bar i { background: var(--green); }
+.tc-tbl .tc-g { color: var(--ink); }
+.tc-g { display: inline-flex; align-items: center; gap: 6px; padding-inline-start: 6px; border-inline-start: 4px solid; }
+.g-steady { border-color: var(--green); } .g-made { border-color: var(--orange); } .g-frozen { border-color: var(--verm); }
+.tc-ok { margin-inline-start: 4px; padding: 0 8px; border-radius: 99px; background: #dff1ea; color: #0b4a34; font-size: .8rem; font-weight: 800; }
+.tc-scroll { overflow-x: auto; } .tc-tbl.wide { min-width: 1060px; }
+.tc-goals { margin-top: 16px; } .tc-goals .tc-tbl { margin-bottom: 12px; } .tc-gtbl { min-width: 540px; } .tc-gtbl tbody th { min-width: 9em; }
+.tc-pqs { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+.tc-q { margin: 0 0 8px; font-weight: 700; } .tc-miss { margin: 8px 0 0; font-size: .9rem; font-weight: 700; color: #7a2e00; }
+.tc-ba { margin: 0 0 12px; font-weight: 700; }
+.tc-dcs { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.tc-dc { background: #fff; border: 2px solid #c9a86a; border-radius: var(--r); padding: 12px; break-inside: avoid; }
+.tc-dc header { display: flex; align-items: center; gap: 8px; } .tc-dc h3 { margin: 0; font-size: 1.05rem; }
+.tc-ic { flex: none; width: 36px; height: 36px; border-radius: var(--r-sm); display: grid; place-items: center; background: var(--night2); color: var(--brass); }
+.tc-dc .dc-r { margin: 8px 0; font-size: .9rem; font-weight: 700; color: var(--ink2); }
+.tc-dc ol { margin: 0; padding-inline-start: 1.3em; font-size: .9rem; } .tc-dc li { margin: 4px 0; }
+.tc-foot { margin: 0; text-align: center; font-size: .8rem; color: var(--paper); opacity: .85; }
+/* lesson plan, year preview, the five questions (js/teacher_plan.js) */
+.tc-h3 { margin: 14px 0 4px; font-size: 1.1rem; }
+.tc-steps { margin: 8px 0 0; padding-inline-start: 1.3em; } .tc-steps li { margin: 6px 0; }
+#tcYear { margin-top: 10px; } #tcYear .tc-errs { margin: 0; }
+.tc-year td { white-space: normal; vertical-align: top; } .tc-year th[scope="row"] { vertical-align: top; text-align: center; width: 3em; }
+.tc-amt { color: var(--ink2); white-space: nowrap; }
+.tc-core { margin: 0; padding-inline-start: 1.4em; display: grid; gap: 10px; }
+.tc-core li { background: #fff; border: 1px solid #e3c99a; border-radius: var(--r-sm); padding: 8px 12px; }
+.tc-core .tc-q { margin: 0 0 4px; } .tc-ans { margin: 0; font-size: .92rem; color: #3b3044; }
+.tc-more { margin: 12px 0 0; } .tc-more .tc-dcs { margin-top: 8px; }
+/* pilot measurement: CSV buttons and the one-page pilot results sheet (js/teacher_pilot.js) */
+.tc-pilot .tc-status:empty { display: none; }
+.tc-sheet .ps-top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 4px; } .tc-sheet .ps-top h2 { margin: 0; outline: none; }
+.ps-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 6px 16px; margin: 8px 0 12px; }
+.ps-f { display: flex; align-items: flex-end; gap: 8px; font-size: .85rem; font-weight: 700; } .ps-f span { flex: none; }
+.ps-f i { flex: 1; min-width: 40px; border-bottom: 1px solid var(--ink2); block-size: 1.2em; }
+.ps-notes { flex-wrap: wrap; margin-top: 12px; } .ps-notes span { flex-basis: 100%; } .ps-notes i { flex-basis: 100%; block-size: 1.8em; }
+.ps-kpis { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); } .ps-kpis dd b { font-size: 1.25rem; }
+.ps-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.ps-small { margin: 4px 0; font-size: .82rem; color: var(--ink2); }
+@media (max-width: 600px) {
+  .tc-card { padding: 12px 14px; } .tc-top h1 { font-size: 1.3rem; }
+  .tc-kpis { grid-template-columns: 1fr 1fr; } .tc-kpi dd b { font-size: 1.2rem; }
+  .tc-pqs { grid-template-columns: 1fr; } .tc-bar { inline-size: 54px; }
+  .tc-sum-h .btn { margin-inline-start: 0; width: 100%; }
+}
+@media print {
+  html, body.tc-page { background: #fff !important; color: #000; }
+  .no-print, .tc-foot { display: none !important; }
+  .tc-top { background: none; border-bottom: 2px solid #000; } .tc-top h1 { color: #000; } .tc-top p { color: #333; }
+  .tc-card { border: 1.5px solid #555; break-inside: avoid; } .tc-list { break-inside: auto; }
+  .tc-sample { border: 2px solid #000; background: #fff; } .tc-chip { background: #fff; color: #000; border: 1px solid #555; }
+  .tc-scroll { overflow: visible; } .tc-tbl.wide, .tc-gtbl { min-width: 0; } .tc-dcs { grid-template-columns: 1fr 1fr; }
+  /* the one-row-per-result table fits the A4 width: smaller text, headers wrap, numbers keep their line */
+  @page { size: A4; margin: 12mm; }
+  .tc-list .tc-tbl { width: 100%; font-size: 7.5pt; }
+  .tc-list .tc-tbl th, .tc-list .tc-tbl td { padding: 3px 4px; white-space: normal; }
+  .tc-list .tc-tbl td.num { white-space: nowrap; } .tc-list .tc-tbl thead th { font-size: 6.5pt; hyphens: auto; }
+  .tc-more:not([open]) { display: none; } .tc-plan details:not([open]) { display: none; }
+  .tc-bar, .tc-bar i { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  /* printing the pilot sheet: only the sheet, on one A4 page */
+  body:not(.pv) #tcPilotSheet { display: none !important; }
+  body.pv .tc-top, body.pv .tc-main > :not(#tcPilotSheet) { display: none !important; }
+  body.pv .tc-main { padding: 0; max-width: none; } body.pv .tc-sheet { border: none; padding: 0; font-size: 9.5pt; }
+  .tc-sheet .tc-tbl th, .tc-sheet .tc-tbl td { padding: 3px 6px; } .tc-sheet .tc-kpi { padding: 4px 8px; } .tc-sheet .tc-kpis { gap: 6px; margin-bottom: 8px; }
+  .tc-sheet .tc-kpis { grid-template-columns: repeat(4, 1fr); } .tc-sheet .ps-two { grid-template-columns: 1fr 1fr; } .tc-sheet .tc-kpi dt { font-size: 7.5pt; }
+}

@@ -1,0 +1,13 @@
+{
+ "ok": true,
+ "zip": "dist/PaydaySpire.zip",
+ "files": 67,
+ "bytes": 4415928,
+ "problems": [],
+ "notes": {
+  "title": "Payday Spire",
+  "art": 27,
+  "played": true,
+  "teacher": true
+ }
+}

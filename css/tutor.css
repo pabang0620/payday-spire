@@ -1,0 +1,55 @@
+/* Payday Spire - month 1 taught by doing (js/tutor.js): the one card to play glows, the others step back; the card bill to
+   come shows in place; a short "-AED 600" on what a card changed; drag to play; the title screen's battle preview. */
+@keyframes glowing { 0%, 100% { box-shadow: 0 0 0 3px var(--yellow), 0 0 14px 4px rgba(240, 228, 66, .55); } 50% { box-shadow: 0 0 0 3px var(--yellow), 0 0 26px 10px rgba(240, 228, 66, .85); } }
+.card.glow, .btn.glow { animation: glowing 1.3s ease-in-out infinite; box-shadow: 0 0 0 3px var(--yellow), 0 0 18px 6px rgba(240, 228, 66, .7); }
+.hand .card.glow { transform: translateY(-6px); }
+body.tutor #hand:has(.glow) .card:not(.glow) { opacity: .72; filter: saturate(.5); }
+body.tutor #hand:has(.glow) .card:not(.glow) kbd { opacity: 1; }
+body.tutor .trait-line { background: rgba(240, 228, 66, .14); border-color: var(--yellow); font-weight: 700; color: #fff8b0; }
+/* the coming card bill: same box as a problem, greyed and dashed (it cannot be aimed at yet) */
+.foe.ghost { cursor: default; background: #f3e6e0; border-style: dashed; opacity: .92; animation: ghostIn .5s ease-out; }
+.foe.ghost .intent { background: #fde3d3; font-weight: 700; }
+@keyframes ghostIn { from { opacity: 0; transform: translateY(-10px) scale(.96); } }
+/* what a card changed (js/tutor.js pop): the first of these spots that lies over no amount, name or forecast */
+.st { position: relative; }
+.pop { position: absolute; z-index: 2; font-weight: 800; font-size: .85rem; line-height: 1.3; padding: 0 6px; border-radius: 6px;
+  pointer-events: none; animation: popUp .8s ease-out forwards; white-space: nowrap; box-shadow: 0 2px 6px rgba(0, 0, 0, .35); }
+.pop.down { background: var(--blue); color: #fff; } .pop.up { background: var(--green); color: #fff; } .pop.bad { background: var(--verm); color: #fff; }
+.st .pop.p-end { top: 3px; inset-inline-end: 4px; } .st .pop.p-mid { bottom: 3px; inset-inline-end: 4px; }
+.st .pop.p-above { bottom: calc(100% + 2px); inset-inline-end: 4px; } .st .pop.p-below { top: calc(100% + 2px); inset-inline-end: 4px; }
+.foe .pop { font-size: .95rem; }
+.foe .pop.p-art { top: 34px; left: 0; right: 0; margin-inline: auto; width: fit-content; } .foe .pop.p-amt { top: 6px; inset-inline-end: 6px; }
+.foe .pop.p-top { top: -14px; inset-inline-start: 8px; } .foe .pop.p-low { bottom: 2px; inset-inline-end: 6px; }
+@keyframes popUp { 0% { opacity: 0; } 15% { opacity: 1; } 75% { opacity: 1; } 100% { opacity: 0; } }
+.hand .card { touch-action: pan-x; }
+.card.dragging { z-index: 30; transition: none; box-shadow: 0 12px 26px rgba(0, 0, 0, .5); }
+
+/* title: one money problem and three cards, inside the title panel. Space budget: the cards sit side by side (never on top
+   of each other, so no card hides another's name) and every name fits its card without breaking a word. js/tutor.js
+   (fitPeek) steps through .fit1-.fit3 until that holds for this language, text size and screen; tools/layout_check.py checks it. */
+.title-in { min-width: 0; max-width: min(640px, 100%); }
+.peek { display: flex; align-items: flex-end; justify-content: center; gap: 14px; margin: 14px 0 4px; padding: 12px 10px 14px; border-radius: var(--r);
+  background: linear-gradient(rgba(20, 18, 46, .35), rgba(20, 18, 46, .75)); border: 1px solid var(--line); max-width: 100%; overflow: hidden; }
+.peek:empty { display: none; }
+.peek .foe { flex: none; width: 8.4rem; cursor: default; padding: 6px 8px 8px; }
+.peek .foe-art { position: static; } .peek .foe .foe-name { padding-inline-end: 0; }
+.peek .foe-art, .peek .foe-art img { height: 68px; } .peek .foe-art img { width: 68px; } .peek .foe-art .ic { width: 52px; height: 52px; }
+.peek .foe .amt { font-size: 1.05rem; }
+.peek-hand { display: flex; align-items: flex-end; gap: 10px; min-width: 0; }
+.peek .card { flex: none; width: 6.4rem; min-height: 0; padding: 6px 8px 8px; cursor: default; font-size: .9rem; }
+.peek .c-name { font-size: .82rem; line-height: 1.15; overflow-wrap: normal; } .peek .c-ic { display: block; } .peek .c-ic .ic { width: 22px; height: 22px; }
+.peek .c-text { display: none; }
+.peek .card:nth-child(1) { transform: rotate(-5deg) translateY(6px); } .peek .card:nth-child(2) { transform: translateY(-6px); box-shadow: 0 0 0 3px var(--yellow); }
+.peek .card:nth-child(3) { transform: rotate(5deg) translateY(6px); }
+[dir="rtl"] .peek .card:nth-child(1) { transform: rotate(5deg) translateY(6px); } [dir="rtl"] .peek .card:nth-child(3) { transform: rotate(-5deg) translateY(6px); }
+/* fit1: the cards share the row's width, thinner frames */
+.peek.fit1 { gap: 8px; padding-inline: 6px; } .peek.fit1 .peek-hand { flex: 1 1 0; gap: 6px; justify-content: center; }
+.peek.fit1 .card { flex: 1 1 0; max-width: 6.4rem; padding: 4px 5px 6px; }
+.peek.fit1 .foe { width: 6.6rem; } .peek.fit1 .foe .kind { display: none; }
+.framed .peek.fit1 .card[class*="tone-"]:not(.curse) { border-width: 7px 7px 9px; border-image-width: 7px 7px 9px; border-radius: 9px; }
+/* fit2: the problem on its own row above the three cards */
+.peek.fit2 { flex-direction: column; align-items: center; } .peek.fit2 .peek-hand { width: 100%; flex: none; }
+.peek.fit2 .foe { width: auto; max-width: 100%; flex-direction: row; flex-wrap: wrap; align-items: center; column-gap: 8px; }
+.peek.fit2 .foe-art, .peek.fit2 .foe-art img { height: 48px; } .peek.fit2 .foe-art img { width: 48px; }
+/* fit3: smaller names, no card icons */
+.peek.fit3 .c-ic { display: none; } .peek.fit3 .c-name { font-size: .72rem; } .peek.fit3 .card { padding-inline: 3px; }

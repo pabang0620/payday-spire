@@ -1,0 +1,42 @@
+{
+ "idle_CLASS7_en_phone": {
+  "clicks": 59,
+  "end_screen_min": 2.7,
+  "month": 10,
+  "net": -11826,
+  "over": "limit",
+  "time_min": 12.4
+ },
+ "idle_K7M3QX_ar_phone": {
+  "clicks": 65,
+  "end_screen_min": 2.3,
+  "month": 11,
+  "net": -14747,
+  "over": "limit",
+  "time_min": 13.2
+ },
+ "impulse_CLASS7_ar_desktop": {
+  "clicks": 106,
+  "end_screen_min": 2.5,
+  "month": 10,
+  "net": -8548,
+  "over": "limit",
+  "time_min": 10.4
+ },
+ "steady_CLASS7_en_desktop": {
+  "clicks": 136,
+  "end_screen_min": 2.8,
+  "month": 13,
+  "net": 19190,
+  "over": "done",
+  "time_min": 11.6
+ },
+ "steady_K7M3QX_en_desktop": {
+  "clicks": 159,
+  "end_screen_min": 2.9,
+  "month": 13,
+  "net": 21840,
+  "over": "done",
+  "time_min": 12.1
+ }
+}

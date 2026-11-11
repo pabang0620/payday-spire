@@ -1,0 +1,87 @@
+/* Payday Spire - captions, Past you, partner theme, result card, before and after, discussion cards, print. */
+
+/* sound captions: their own line in the layout, never over the game (the status bar, the open window, the end screen) */
+.cap-slot { margin: 0; min-height: 1.4em; font-size: .85rem; line-height: 1.4; opacity: 0; transition: opacity .2s; }
+.cap-slot.on { opacity: 1; }
+.hud-top .cap-slot { flex: 1 1 auto; min-width: 0; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #fff; }
+.panel .cap-slot { color: var(--ink2); margin-top: 8px; }
+.end .cap-slot { color: #fff; }
+
+/* Past you chip in the status bar */
+.hud-stats.six { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.st-past { --c: var(--yellow); }
+.st-past .st-v { font-size: .9rem; overflow: hidden; text-overflow: ellipsis; }
+.st-past.ahead .st-v::before { content: "\25B2 "; } .st-past.behind .st-v::before { content: "\25BC "; }
+.lines li.good { color: #00694c; font-weight: 700; } .lines li.warn { color: #a03a00; font-weight: 700; }
+.cbar.cpast i { background: var(--yellow); background-image: repeating-linear-gradient(90deg, transparent 0 5px, rgba(0,0,0,.25) 5px 7px); }
+.past-end { display: flex; gap: 8px; align-items: flex-start; margin: 8px 0 0; }
+
+/* title links */
+.title-links { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 10px 0 0; }
+.tlink { color: var(--brass); font-weight: 700; text-underline-offset: 3px; min-height: 32px; display: inline-flex; align-items: center; }
+
+/* partner theme preview (fictional brands) */
+body[data-brand="demo-bank"] { --brass: #7fd8d0; --brass-d: #2f8a82; --line: rgba(127, 216, 208, .35); --line2: rgba(127, 216, 208, .7); }
+body[data-brand="demo-school"] { --brass: #ffd166; --brass-d: #b07d00; }
+.brand-bar { display: flex; gap: 10px; align-items: center; background: rgba(255,255,255,.08); border: 1px solid var(--line2); border-radius: var(--r); padding: 8px 10px; margin-bottom: 12px; }
+.brand-txt { display: flex; flex-direction: column; } .brand-txt small { opacity: .85; }
+.brand-logo { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--brass); color: #10221f; font-weight: 800; flex: none; }
+.brand-logo.sm { width: 24px; height: 24px; font-size: .7rem; border-radius: 6px; vertical-align: middle; margin-inline-end: 4px; }
+.brand-hud { font-size: .8rem; font-weight: 700; display: inline-flex; align-items: center; }
+.brand-end { display: flex; gap: 10px; align-items: center; margin: 12px 0 0; }
+
+/* result card */
+.result { background: var(--night2); border: 2px solid var(--brass); border-radius: var(--r); padding: 14px; margin-top: 20px; }
+.rc-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; }
+.result h2 { margin: 0; display: flex; gap: 6px; align-items: center; }
+.rc-grade { font-weight: 800; font-size: 1.2rem; margin: 6px 0; }
+.rc-nums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 8px 0; }
+.rc-nums div { background: rgba(255,255,255,.06); border-radius: 10px; padding: 8px; }
+.rc-nums dt { font-size: .8rem; opacity: .85; } .rc-nums dd { margin: 2px 0 0; font-weight: 800; }
+.code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; letter-spacing: .04em; }
+.rc-rcode { font-size: .9rem; margin: 8px 0 0; }
+#rcRcode { overflow-wrap: anywhere; user-select: all; -webkit-user-select: all; color: var(--yellow); }
+
+/* before and after */
+.ba { background: rgba(255,255,255,.05); border-radius: var(--r); padding: 10px 12px; }
+.ba-sum { margin: 0 0 8px; }
+.ba-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 8px; align-items: center; margin: 6px 0; }
+.ba-side { display: flex; flex-direction: column; background: var(--night2); border-radius: 10px; padding: 6px 8px; }
+.ba-side small { opacity: .8; }
+.ba-m { font-style: normal; font-weight: 700; font-size: .85rem; }
+.ba-m.right { color: #5fd3a8; } .ba-m.right::before { content: "\2713 "; }
+.ba-m.part { color: var(--yellow); } .ba-m.wrong { color: #ff9a6b; } .ba-m.wrong::before { content: "\2715 "; } .ba-m.skip { opacity: .7; }
+
+/* discussion cards */
+.panel[data-kind="cards"] { width: min(920px, 100%); }
+.dcards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 10px; }
+.dcard { border: 2px solid #c9a86a; border-radius: var(--r); padding: 10px 12px; background: #fff; break-inside: avoid; }
+.dcard header { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.dcard header small { margin-inline-start: auto; color: var(--ink2); }
+.dc-r { margin: 6px 0; font-weight: 600; color: var(--ink2); }
+.dcard ol { margin: 4px 0 0; padding-inline-start: 1.3em; }
+
+@media (max-width: 600px) {
+  .hud-stats.six { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  /* phone: the status bar's top is always the same two rows, whatever the month brings: month, turn and month tags on one
+     line (tags shorten, they never push the buttons down) with help and settings at its end, then the caption line */
+  .hud-top { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 6px; row-gap: 0; }
+  .hud-top .hud-month { grid-column: 1; grid-row: 1; flex-wrap: nowrap; white-space: nowrap; overflow: hidden; min-width: 0; }
+  .hud-month > b, .hud-month .turn-chip { flex: none; } .hud-month .turn-chip { order: 1; } .hud-month .trait-chip { order: 2; }
+  .hud-month .trait-chip { flex: 0 1 auto; min-width: 3.4em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .hud-month.m1 .trait-chip { display: none; } .hud-month.m2 { font-size: .78rem; } .hud-month.m2 .turn-chip { font-size: .7rem; padding: 1px 6px; }
+  .hud-month .brand-hud { order: 3; flex: 0 1 auto; min-width: 0; overflow: hidden; }
+  .hud-top .hud-btns { grid-column: 2; grid-row: 1; }
+  .hud-top .cap-slot { grid-column: 1 / -1; grid-row: 2; font-size: .72rem; min-height: 1.3em; line-height: 1.3; color: #fff; }
+  .rc-nums { grid-template-columns: 1fr 1fr; }
+  .dcards { grid-template-columns: 1fr; }
+  .ba-row { grid-template-columns: 1fr; } .ba-arrow { display: none; }
+}
+
+@media print {
+  body { background: #fff; color: #000; }
+  #hud, #main, .no-print, .cap-slot, .note-slot { display: none !important; }
+  .modal { position: static; background: none; padding: 0; display: block; }
+  .panel { border: 0; box-shadow: none; max-height: none; overflow: visible; width: 100%; }
+  .dcards { grid-template-columns: 1fr 1fr; }
+}

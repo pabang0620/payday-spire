@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payday Spire</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/battle.css">
+<link rel="stylesheet" href="css/class.css">
+<link rel="stylesheet" href="css/tutor.css">
+<link rel="stylesheet" href="css/goals.css">
+</head>
+<body>
+<header id="hud" class="hud" hidden>
+  <div class="hud-top"><div id="hudMonth" class="hud-month"></div><p id="capH" class="cap-slot" aria-hidden="true"></p>
+    <div class="hud-btns"><button class="ibtn" id="btnHelp" data-i18n-label="btn.help"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5V14M12 17.5h.01"/></svg></button>
+    <button class="ibtn" id="btnSet2" data-i18n-label="btn.settings"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h9M17 7h3M15 4.5v5M4 17h3M11 17h9M9 14.5v5"/></svg></button></div></div>
+  <div id="hudStats" class="hud-stats"></div>
+</header>
+<main id="main">
+  <section id="title" class="screen title">
+    <div class="title-in">
+      <h1 data-i18n="title">Payday Spire</h1>
+      <p class="tag" data-i18n="tag"></p>
+      <div id="titlePeek" class="peek" aria-hidden="true"></div>
+      <div class="row"><button class="btn pri big" id="btnPlay" data-i18n="btn.play"></button>
+        <button class="btn" id="btnHow" data-i18n="btn.how"></button><button class="btn" id="btnSet" data-i18n="btn.settings"></button>
+        <button class="btn" id="btnLang" data-i18n="lang"></button></div>
+      <label for="code" class="code-l" data-i18n="code.l"></label>
+      <div class="code-row"><input id="code" maxlength="6" autocomplete="off" spellcheck="false" dir="ltr" aria-describedby="codeN"><button class="btn" id="btnRandom" data-i18n="btn.random"></button></div>
+      <p id="codeN" class="small" data-i18n="code.n"></p>
+      <div id="goalPick" class="gpick"></div>
+      <p class="small" data-i18n="title.teacher"></p>
+      <p class="title-links"><a class="tlink" href="teacher.html" id="teacherLink" data-i18n="title.teacherLink"></a> <a class="tlink" id="brandLink" href="index.html?brand=demo-bank"></a></p>
+    </div>
+  </section>
+  <section id="battle" class="screen battle" hidden>
+    <div id="traitLine" class="trait-line" hidden></div>
+    <div id="foes" class="foes"></div>
+    <p id="foeLine" class="foe-line" aria-hidden="true" hidden></p>
+    <div class="ctrl"><div id="focusBox" class="focus-box"></div><p id="note" class="note-slot"></p><button class="btn pri" id="btnEnd"></button></div>
+    <div id="hand" class="hand"></div>
+    <ul id="log" class="log"></ul>
+  </section>
+  <section id="end" class="screen end" hidden tabindex="-1"></section>
+</main>
+<div id="modal" class="modal" role="dialog" aria-modal="true" hidden><div id="panel" class="panel"></div></div>
+<div id="srP" class="sr" aria-live="polite"></div><div id="srA" class="sr" aria-live="assertive"></div>
+<script src="art_b/manifest.js"></script>
+<script src="js/data.js"></script>
+<script src="js/ledger.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/engine_more.js"></script>
+<script src="js/goals.js"></script>
+<script src="js/policy.js"></script>
+<script src="js/i18n_en.js"></script>
+<script src="js/i18n_ar.js"></script>
+<script src="js/i18n_more.js"></script>
+<script src="js/i18n_goals.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/artload.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/music.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/tutor.js"></script>
+<script src="js/class.js"></script>
+<script src="js/why.js"></script>
+<script src="js/check.js"></script>
+<script src="js/past.js"></script>
+<script src="js/brand.js"></script>
+<script src="js/flow.js"></script>
+<script src="js/screens.js"></script>
+<script src="js/goalui.js"></script>
+<script src="js/juice.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

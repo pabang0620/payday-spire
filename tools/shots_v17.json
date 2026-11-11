@@ -1,0 +1,10 @@
+{
+ "fails": [],
+ "console_errors": [],
+ "runs": [
+  "steady_en_phone end.cmp.g.nn end.goal.spare",
+  "steady_ar_phone end.cmp.g.nn end.goal.spare",
+  "impulse_en_desktop end.cmp.g.nn None",
+  "impulse_ar_phone end.cmp.g.nn None"
+ ]
+}

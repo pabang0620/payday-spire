@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Payday Spire teacher dashboard: paste your students' result codes to see a class summary. Nothing is sent or saved.">
+<title>Payday Spire - Teacher dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/teacher.css">
+</head>
+<body class="tc-page">
+<header class="tc-top">
+  <div class="tc-top-in">
+    <div class="tc-brand">
+      <span class="tc-logo" id="tcLogo" aria-hidden="true"></span>
+      <div><h1 data-i18n="tc.title">Teacher dashboard</h1><p data-i18n="tc.sub"></p></div>
+    </div>
+    <nav class="tc-nav no-print" aria-label="Page">
+      <a class="btn" href="index.html" data-i18n="tc.back">Back to the game</a>
+      <button class="btn" id="tcLang" type="button"></button>
+    </nav>
+  </div>
+</header>
+<main class="tc-main" id="tcMain">
+  <section class="tc-card no-print" aria-labelledby="inT">
+    <h2 id="inT" data-i18n="tc.in.t">Add results</h2>
+    <p class="tc-privacy" data-i18n="tc.privacy"></p>
+    <details class="tc-how">
+      <summary data-i18n="tc.how.t">How students get a code</summary>
+      <ol><li data-i18n="tc.how.1"></li><li data-i18n="tc.how.2"></li><li data-i18n="tc.how.3"></li><li data-i18n="tc.how.4"></li></ol>
+    </details>
+    <label class="tc-lbl" for="tcIn" data-i18n="tc.in.lbl">Result codes</label>
+    <textarea id="tcIn" dir="ltr" rows="7" spellcheck="false" autocomplete="off" placeholder="PS2-K7M3QX-....."></textarea>
+    <div class="tc-one">
+      <label class="tc-lbl" for="tcOne" data-i18n="tc.one.lbl">Add one code</label>
+      <div class="tc-one-in"><input id="tcOne" type="text" dir="ltr" autocomplete="off" spellcheck="false" autocapitalize="characters" placeholder="PS2-...">
+        <button class="btn" id="tcAdd" type="button" data-i18n="tc.add">Add</button></div>
+    </div>
+    <div class="tc-btns">
+      <button class="btn pri" id="tcShow" type="button" data-i18n="tc.show">Show class summary</button>
+      <button class="btn" id="tcSample" type="button" data-i18n="tc.sample">Load a sample class</button>
+      <button class="btn" id="tcClear" type="button" data-i18n="tc.clear">Clear</button>
+    </div>
+    <p class="tc-status" id="tcStatus" role="status" aria-live="polite"></p>
+    <div id="tcErrs"></div>
+  </section>
+  <section class="tc-card tc-plan" aria-labelledby="plT">
+    <h2 id="plT" data-i18n="tc.pl.t">Plan the lesson</h2>
+    <details class="tc-how">
+      <summary data-i18n="tc.ls.t">A 45-minute lesson, step by step</summary>
+      <ol class="tc-steps" id="tcSteps"></ol>
+    </details>
+    <h3 class="tc-h3" data-i18n="tc.yr.t">Preview this year</h3>
+    <p class="tc-note" data-i18n="tc.yr.sub"></p>
+    <label class="tc-lbl" for="tcYrCode" data-i18n="tc.yr.lbl">Class code</label>
+    <div class="tc-one-in"><input id="tcYrCode" type="text" dir="ltr" maxlength="6" autocomplete="off" spellcheck="false" autocapitalize="characters" placeholder="K7M3QX">
+      <button class="btn" id="tcYrShow" type="button" data-i18n="tc.yr.btn">Show the year</button></div>
+    <div id="tcYear" aria-live="polite"></div>
+  </section>
+  <div id="tcOut" tabindex="-1"></div>
+  <section class="tc-card tc-sheet" id="tcPilotSheet" aria-labelledby="psT" hidden></section>
+  <section class="tc-card tc-qs" aria-labelledby="qsT">
+    <h2 id="qsT" data-i18n="tc.qs.t">Five questions for the talk</h2>
+    <p class="tc-note" data-i18n="tc.qs.sub"></p>
+    <ol class="tc-core" id="tcCore"></ol>
+    <details class="tc-how tc-more">
+      <summary data-i18n="tc.qs.more">More questions from the discussion cards</summary>
+      <div class="tc-dcs" id="tcMore"></div>
+    </details>
+  </section>
+  <p class="tc-foot" data-i18n="tc.foot"></p>
+</main>
+<script src="js/data.js"></script>
+<script src="js/i18n_en.js"></script>
+<script src="js/i18n_ar.js"></script>
+<script src="js/i18n_more.js"></script>
+<script src="js/i18n_goals.js"></script>
+<script src="js/i18n_teacher.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/class.js"></script>
+<script src="js/sample_class.js"></script>
+<script src="js/teacher.js"></script>
+<script src="js/teacher_plan.js"></script>
+<script src="js/teacher_pilot.js"></script>
+</body>
+</html>
