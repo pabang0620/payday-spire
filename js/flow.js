@@ -173,7 +173,7 @@
       s.deck.forEach((id) => { counts[id] = (counts[id] || 0) + 1; });
       const can = !s.course && E().spare(s) >= C.COURSE_COST;
       // the same Savings number as the status bar; the fund's part above its goal and the flight money are named apart
-      const over = E().fundOver(s), cp = E().coursePayback(s); // how soon the course pays for itself (judge_B_final2 5-2)
+      const over = E().fundOver(s), cp = E().coursePayback(s); // how soon the course pays for itself
       const money = t('sh.b', { a: s.savings }) + (over ? ' ' + t('sh.bx', { b: over, g: C.LIVING }) : '') + (s.sink > 0 ? ' ' + t('sh.bs', { a: s.sink }) : '');
       body += '<div class="opts"><button class="opt" data-act="course"' + (can ? '' : ' disabled') + '>' +
         '<b>' + t('sh.course', { a: C.COURSE_COST, r: C.COURSE_RAISE }) + '</b><span>' + t(s.course ? 'sh.owned' : can ? 'sh.course.n' : 'why.savings') + '</span>' +

@@ -1,4 +1,4 @@
-"""v11 screenshots of the 6th judge fixes (review/judge_B_6.md), English and Arabic, desktop (1280x800) and phone (390x844):
+"""v11 screenshots of the 6th round of fixes, English and Arabic, desktop (1280x800) and phone (390x844):
   why     a year with one card bill not paid in full and a breakdown that found the emergency fund empty (HZES4U, steady
           habits): the reasons say "One card bill ... the whole bill" and why the fund was empty, the lesson box says
           "one card bill" (count rule in PS.t), shots/v11_why_*.png and v11_lesson_*.png

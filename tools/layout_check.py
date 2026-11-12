@@ -14,7 +14,7 @@ sideways inside its own row. What is checked at each stop:
     can show (five digits in every money chip, a Past you chip with a five-digit lead), the end screen's four numbers and the
     result card's numbers after a year, and the teacher dashboard's numbers: no box overlaps another, none goes past the
     screen, no text spills out of its box or is cut (css/battle.css status bar space budget, js/ui.js fitStats).
-Added after the screen review (review/audit_layout.md: problem cards cut at the largest text on every screen size, Arabic
+Added after the screen review (problem cards cut at the largest text on every screen size, Arabic
 card text drawn past the card, month tags pushing the status bar to three rows, "-600" over the amounts, "A++" read "++A"):
   - key information (js/ui.js foeProblems): every money problem's name, amount and first forecast line in view in the
     problems area without scrolling, at every screen x text size x language (the area's own budget, js/ui.js fitBattle),

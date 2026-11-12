@@ -125,7 +125,7 @@ The playtest presses the real buttons and adds up a time for a person: each new 
 ## Simplifications (also said in the game)
 
 The card limit (AED 10,000) is lower than real first-job limits (often 2-3 salaries) so one short year can show the spiral. Interest on a card bill not paid in full is shown as one month at 3% on the whole bill (real cards count each day from the purchase). Bill late fees (AED 100), surprise cost prices, the payroll delay and fund returns are example values, not a product.
-The Arabic text was written against the arabic-native-reviewer rules (an AI check) and still needs a native speaker before release.
+The Arabic text was checked with an AI language review and still needs a native speaker before release.
 
 ## Art and AI use
 

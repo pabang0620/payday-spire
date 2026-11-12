@@ -24,7 +24,7 @@ module.exports = function (PS, codes, styles, ok, read) {
   E.startTurn = function (s) { const r = start0.apply(this, arguments); look(s, 'turn start'); return r; };
   try { codes.forEach((code) => styles.forEach((pol) => PS.simYear(code, pol))); } finally { E.play = play0; E.startTurn = start0; }
   ok('S1 "all handled" only when nothing is left or still to come (' + seen + ' empty moments, ' + next + ' with one to come)', !bad.length && next > 0, bad.slice(0, 3).join(' | ') || 'no moment with one still to come was met');
-  // G4 the line under "You made it" names this year's reasons, all of them and only them (judge_B_final2 5-1: a year with
+  // G4 the line under "You made it" names this year's reasons, all of them and only them (a year with
   //    a card bill not paid in full read "with some debt or a thin emergency fund"); PS.grade and the line share PS.gradeMiss
   const lang0 = PS.lang, g4 = [], ALL = ['debt', 'overdue', 'missed', 'fund', 'burnout'];
   const checkLine = (s, tag) => {
@@ -49,7 +49,7 @@ module.exports = function (PS, codes, styles, ok, read) {
   ok('G4 "You made it" names every reason of the year and no other (' + codes.length * styles.length + ' years + a missed card bill, en/ar)',
     !g4.length && PS.grade(one) === 'made', g4.slice(0, 3).join(' | '));
   // LF1 leftover cash at month end: the fund option says under, at or over its goal in the right words, and when the cash
-  //     is more than the fund needs one option fills it to its goal and saves the rest (judge_B_final2 5-3)
+  //     is more than the fund needs one option fills it to its goal and saves the rest
   const lf = [], G = PS.CONST.LIVING;
   [0, 1000, G - 1, G, G + 500].forEach((b) => [100, 2000, 6140].forEach((c) => {
     const s = E.newGame(codes[0]); E.startMonth(s); s.buffer = b; s.cash = c; s.savings = 0;
@@ -63,7 +63,7 @@ module.exports = function (PS, codes, styles, ok, read) {
   }));
   ok('LF1 leftover cash: fund under, at or over its goal said right, fill-to-goal-and-save-the-rest option, the marked one is the steady pick (15 cases, en/ar)', !lf.length, lf.slice(0, 3).join(' | '));
   // CP1 the course window says how soon the course pays for itself and what the raise brings back this year; the steady
-  //     style buys it by the same rule (judge_B_final2 5-2: a student who only looks at net worth learns "the course loses")
+  //     style buys it by the same rule (a student who only looks at net worth learns "the course loses")
   const cp = [], C = PS.CONST;
   PS.SHOP_AFTER.forEach((mi) => {
     const r = E.coursePayback({ mi }), back = (11 - mi) * C.COURSE_RAISE;

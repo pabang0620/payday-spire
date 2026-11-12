@@ -6,9 +6,9 @@
 //   top-up only: the only useful move is an emergency fund top-up (the turn the 4th judge counted as empty);
 //   empty: nothing on screen to face.
 // M1 every month of every code has a choice turn (steady habits), M2 months 1-4 have at most 2 empty or top-up-only turns,
-// M3 months 6-12 have nothing to face on at most 15% of turns (the second half was quiet: review/audit_ux.md #4, #5),
+// M3 months 6-12 have nothing to face on at most 15% of turns (the second half was quiet),
 // H1 from month 2 no fresh hand holds more than C.HAND_SAME copies of one card while another kind waits in the piles
-// (judge_B_final 1-2: four Pay from cash and nothing else; js/engine.js varyHand).
+// (four Pay from cash and nothing else; js/engine.js varyHand).
 module.exports = function (PS, codes, ok) {
   const E = PS.E, C = PS.CONST;
   const AIMED = ['pay', 'swipe', 'compare', 'negotiate', 'wait', 'refuse', 'paycard', 'snowball', 'fundpay'];
@@ -77,7 +77,7 @@ module.exports = function (PS, codes, ok) {
     if (q > 2) quiet.push(code + ' ' + q + ' (' + months.slice(0, 4).map((m) => m.join('/')).join(' | ') + ')');
     months.slice(5).forEach((m) => m.forEach((x) => { if (x !== 'dialog') { late++; if (x === 'empty') lateEmpty++; } }));
   });
-  // M4 the last turn of a month: months 1 and 10 always have something on it (judge_B_final2 5-4: the moving van, the car
+  // M4 the last turn of a month: months 1 and 10 always have something on it (the moving van, the car
   // service), and no more than 3 months leave it empty on more than half of the codes
   const lastEmpty = Array(12).fill(0), m4 = [];
   codes.forEach((code) => playYear(code, 'steady').forEach((m, i) => {

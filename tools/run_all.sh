@@ -29,13 +29,13 @@ echo "== end screens and title, shots/v6_*.png"
 python3 tools/shots_v6.py
 echo "== the four screens of the Arabic review fix, shots/v8_*.png"
 python3 tools/shots_v8.py
-echo "== the 5th judge fixes: promised Eid card, fund card, zero statement line, forecast line row, shots/v10_*.png"
+echo "== the 5th round of fixes: promised Eid card, fund card, zero statement line, forecast line row, shots/v10_*.png"
 python3 tools/shots_v10.py | head -c 300; echo
-echo "== the 6th judge fixes: counted nouns, why the fund was empty, three problems on a phone, card texts, shots/v11_*.png"
+echo "== the 6th round of fixes: counted nouns, why the fund was empty, three problems on a phone, card texts, shots/v11_*.png"
 python3 tools/shots_v11.py | head -c 300; echo
-echo "== the final judge fixes: one Savings number, the fund option, hand rule, second-half bills, shots/v13_*.png"
+echo "== the final fixes: one Savings number, the fund option, hand rule, second-half bills, shots/v13_*.png"
 python3 tools/shots_v13.py | head -c 300; echo
-echo "== the final-2 judge fixes: grade reasons, course payback, leftover split, turn-3 bills, shots/v14_*.png"
+echo "== the final-2 fixes: grade reasons, course payback, leftover split, turn-3 bills, shots/v14_*.png"
 python3 tools/shots_v14.py | head -c 300; echo
 echo "== the year's goal, the levels and the card feedback, shots/v15_*.png"
 python3 tools/shots_v15.py | head -c 300; echo

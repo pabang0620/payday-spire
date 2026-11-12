@@ -89,7 +89,7 @@ module.exports = function (PS) {
     turn: (s) => { let a; if (s.mind >= 14 && (a = tryp(s, 'sidegig'))) return a; return without(P.steady.turn, dodge)(s); },
     reward: gigReward,
   });
-  // all of the above at once (the score player of review/audit_ux.md #1)
+  // all of the above at once (the score player)
   P.maxer = Object.assign({}, P.gigMax, {
     turn: fundFirst((s) => { const m = P.minPay.turn; let a; if (s.mind >= 10 && (a = tryp(s, 'sidegig'))) return a; return without((x) => (m(x) && gigTurn(x)), minRefuse)(s); }),
   });

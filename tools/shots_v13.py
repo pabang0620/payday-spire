@@ -1,4 +1,4 @@
-"""v13 screenshots of the final-judge fixes (review/judge_B_final.md part 6), English and Arabic, desktop (1280x800) and
+"""v13 screenshots of the final fixes, English and Arabic, desktop (1280x800) and
 phone (390x844), steady habits on K7M3QX:
   shop    the shop window after month 6: "Savings now" is the status bar's Savings; the fund's part above its goal and the
           flight money are named apart (v13_shop_*.png)

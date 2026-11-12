@@ -101,7 +101,7 @@ module.exports = function (PS, styles, ok) {
   PS.lang = lang0;
   ok('G1 names agree with their verbs (en number, ar gender)', !g.length, g.slice(0, 8).join(' | '));
 
-  // T2: one word for one thing, and one way to write a negative amount (review/audit_text.md). The same list is run over every
+  // T2: one word for one thing, and one way to write a negative amount. The same list is run over every
   // sentence text (both languages, placeholders and tags cut out), every line the years wrote and every text the browser drew
   const BAN = {
     en: [[/\bstatements?\b/i, '"statement" (the word is card bill)'], [/\bbuffers?\b/i, '"buffer" (the word is emergency fund)'], [/\bmind\b/i, '"mind" (the word is mood)'],

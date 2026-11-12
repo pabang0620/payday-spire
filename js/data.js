@@ -117,7 +117,7 @@
     // fixed: a set price (a contract deposit, a government fee or fine, a utility tariff): no quote to compare, nothing to negotiate
     deposit: { kind: 'bill', amt: 1800, at: 1, art: 'enemy_rent', icon: 'key', refund: true, fixed: true },
     // phone, power and DEWA bills are the part above the base plan in LIVING (roaming and extra data, summer air conditioning)
-    // turn-3 bills keep the last turn of month 1 and month 10 a turn with something to decide (judge_B_final2 5-4):
+    // turn-3 bills keep the last turn of month 1 and month 10 a turn with something to decide:
     // a small van and two movers for a room's boxes, about AED 300-500; a yearly car service, about AED 300-600
     movers: { kind: 'bill', amt: 400, at: 2, art: 'enemy_rent', icon: 'home' },
     carserv: { kind: 'bill', amt: 450, at: 2, art: 'enemy_car', icon: 'car' },

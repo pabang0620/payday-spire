@@ -1,4 +1,4 @@
-"""v14 screenshots of the final-2 judge fixes (review/judge_B_final2.md part 5), English and Arabic, desktop (1280x800) and
+"""v14 screenshots of the final-2 fixes, English and Arabic, desktop (1280x800) and
 phone (390x844), K7M3QX:
   tut     month 1, turn 1 with the guide: the Moving van shows as a bill still to come (v14_tut_*.png)
   van     month 1, turn 3: the Moving van to pay (v14_van_*.png)

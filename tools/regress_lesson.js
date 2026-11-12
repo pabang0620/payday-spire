@@ -1,5 +1,5 @@
 // R4 lesson check for tools/regress.js: steady habits come first against every play style a player could try, on many class
-// codes, so no shortcut can turn the lesson around (review/audit_finance.md #3, review/audit_ux.md #1 and #6).
+// codes, so no shortcut can turn the lesson around.
 // Styles: the five of tools/regress.js and the shortcuts of tools/policies.js SHORTCUTS (only the card minimum, side gigs
 // with no planned joy, the card bill from the emergency fund, no planned joy, small bills left late, all of them at once).
 //   R4  on average over all codes every style ends below steady (each under its limit, AVG below);
@@ -8,7 +8,7 @@
 //   R4c the costs are real and seen: the minimum-only style pays card interest on every code, steady never burns out, and a
 //       year with a burnout is never graded "Steady year";
 //   R4d the emergency fund pays the card bill only for what cash cannot cover (it is not a free way to pay);
-//   R4e paying only the card minimum never ends more than MIN_NOISE above steady on any code (judge_B_final 1-6: it was +426
+//   R4e paying only the card minimum never ends more than MIN_NOISE above steady on any code (it was +426
 //       on 6 codes). Root causes fixed: Compare worked on set prices, the flight fare could be haggled, a fund kept full by not
 //       paying the card counted as a full cushion, a few dirhams on the card cost the full worry, and money over the fund's goal
 //       could not pay for the course. What is left is the two years drawing cards in a different order (a side gig, an Impulse buy).

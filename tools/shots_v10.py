@@ -1,4 +1,4 @@
-"""v10 screenshots of the 5th judge fixes (review/judge_B_5.md), English and Arabic, desktop (1280x800) and phone (390x844),
+"""v10 screenshots of the 5th round of fixes, English and Arabic, desktop (1280x800) and phone (390x844),
 class code K7M3QX (the judge's own code), steady choices:
   eid      month 3, turn 1: Eid gifts (promised by the month's intro) is in the first hand, and so is Emergency fund pays
            while the laptop repair is on screen; the forecast line is its own row under the problem cards (v10_eid_*.png)

@@ -147,7 +147,7 @@ require('./regress_screen.js')(PS, codes, STYLES, ok, read);
 const gameLines = require('./regress_text.js')(PS, STYLES, ok);
 require('./regress_cards.js')(PS, ok);
 // S2 one Savings number: the status bar and the shop window both show s.savings; the fund's part above its goal and the
-// flight money are named apart in the shop (judge_B_final 1-5: "Savings 400" on top, "Savings now: none" in the shop)
+// flight money are named apart in the shop ("Savings 400" on top, "Savings now: none" in the shop)
 {
   const src = (f) => fs.readFileSync(path.join(__dirname, '..', 'js', f), 'utf8');
   const hud = /stat\('savings', 'save', ui\.money\(s\.savings\)\)/.test(src('ui.js'));

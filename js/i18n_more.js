@@ -167,7 +167,7 @@
     'wy.tired': 'Tired months (mood under {l} at the start of a month) cost AED {a} in tired spending and let extra Impulse buys in.',
     'st.spent0': 'Leftover cash spent on small things: AED {a}.',
     'wc.savPaid': 'AED {n} came out of savings',
-    // v14 (judge_B_final2 5): the reasons under "You made it", the course payback, the leftover split, two turn-3 bills
+    // v14: the reasons under "You made it", the course payback, the leftover split, two turn-3 bills
     'gm.debt': 'card debt left at year end', 'gm.fund': 'less than a month of costs in your emergency fund',
     'gm.overdue': '{n#a bill still overdue|{n} bills still overdue}', 'gm.burnout': '{n#a burnout|{n} burnouts}',
     'gm.missed': '{n#a card bill not paid in full by its due date|{n} card bills not paid in full by their due date}', 'gm.comma': ', ', 'gm.and': ' and ',

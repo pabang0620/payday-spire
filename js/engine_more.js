@@ -30,7 +30,7 @@
   }
   // what to do with the cash left at month end. The fund option says what the fund will hold against its goal (one month of
   // costs) in the words for under, at or over it; when the cash is more than the fund needs, one option fills the fund to
-  // its goal and saves the rest (judge_B_final2 5-3). tools/regress_screen.js LF1 checks the sums and the sentences
+  // its goal and saves the rest. tools/regress_screen.js LF1 checks the sums and the sentences
   // how soon the course pays for itself, and what the raise brings back this year if it is bought now (raise from next month)
   function coursePayback(s) {
     const k = Math.ceil(C.COURSE_COST / C.COURSE_RAISE), m = Math.max(0, 11 - s.mi), a = m * C.COURSE_RAISE, g = a - C.COURSE_COST;

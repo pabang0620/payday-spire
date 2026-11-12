@@ -1,4 +1,4 @@
-"""v8 screenshots of the four screens fixed after the Arabic native review (review/ar_native_review_final.md part 5), in
+"""v8 screenshots of the four screens fixed after the Arabic native review, in
 English and Arabic, desktop (1280x800) and phone (390x844, and the battle also 360x640 with the largest text):
   title    the title screen preview: three cards side by side, no name covered (shots/v8_title_*.png)
   tut      month 1 after the Agent fee is paid (cash, then the card): the Room deposit is still to come, so the line names its turn (v8_tut_*.png)
